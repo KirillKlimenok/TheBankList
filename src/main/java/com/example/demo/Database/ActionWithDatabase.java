@@ -28,38 +28,6 @@ public class ActionWithDatabase {
         return statement;
     }
 
-//    private void createNewUser(Statement statement) throws SQLException {
-//        System.out.println("Please, enter name new User: ");
-//        String name1 = scanner.next();
-//        System.out.println("Please, enter surname new User: ");
-//        String surname1 = scanner.next();
-//
-//        statement.execute("insert into user(name, surename) value('" + name1 + "','" + surname1 + "')");
-//    }
-//
-//    private void addUserBankAccount(Statement statement) throws SQLException {
-//        user = showAllUsers(statement);
-//        System.out.println("Please, enter id user to whom you want to open an account");
-//        int idUser = scanner.nextInt();
-//        float countMoney = (float) (200 + Math.random() * 1000);
-//        statement.execute("insert into account(account, userid) value('" + countMoney + "','" + idUser + "')");
-//    }
-//
-//    public String[] showAllUsers(Statement statement) throws SQLException {
-//        ResultSet resultSet = statement.executeQuery("select * from user");
-//        int countUsers = statement.executeUpdate("select count(accountId) from user");
-//        String[] strings = new String[countUsers];
-//        int i = 0;
-//        while (resultSet.next()) {
-//            strings[1] = resultSet.getString(1) + "   " + resultSet.getString(2) + "   " + resultSet.getString(3);
-//            System.out.print(resultSet.getString(1) + "   ");
-//            System.out.print(resultSet.getString(2) + "   ");
-//            System.out.print(resultSet.getString(3) + "\n__________________\n");
-//        }
-//
-//        return strings;
-//    }
-
     public static double getNumberObjInTable(String sql, Statement statement) throws SQLException {
         ResultSet resultAccount = statement.executeQuery(sql);
         resultAccount.next();
