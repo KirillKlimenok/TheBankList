@@ -8,7 +8,6 @@ public class ActionWithDatabase {
     private final String userName = "root";
     private final String password = "root";
     private final String connectionURL = "jdbc:mysql://localhost:3306/mydata";
-    public String[] user = new String[10];
     private Connection connection;
     private String countMoneyRichUser = "";
     private int idRichUser = -1;

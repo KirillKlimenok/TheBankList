@@ -43,9 +43,11 @@ public class HelloServlet extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        out.println("<div>");
-        out.println("<button id = userInformation style = \"width = 100px;\" onclick = '" + "callServlet()" + "'>" + "get user information" + "</button>");
-        out.println("<button id = totalMoney style = \"width = 100px;\" onclick = '" + "getTotalAmountOfMoney()" + "'>" + "get total amount of money" + "</button>");
+        out.println("<div style = \"display: flex; " +
+                "flex-flow: column;\n" +
+                "align-items: center;\">");
+        out.println("<button id = userInformation style = \"width = 100px; position: relative;\" onclick = '" + "callServlet()" + "'>" + "get user information" + "</button>");
+        out.println("<button id = totalMoney style = \"width = 100px; position: relative; \" onclick = '" + "getTotalAmountOfMoney()" + "'>" + "get total amount of money" + "</button>");
         out.println("</div>");
         //out.println("<br>" + inf + "</br>");
         out.println("</body></html>");
